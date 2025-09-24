@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avance de Tesis — Gabriel Morales Tello</title>
+  <style>
+    :root{font-family:system-ui,Segoe UI,Roboto,Arial}
+    body{margin:0;padding:2rem;line-height:1.55}
+    .btn{display:inline-block;margin-bottom:1rem;padding:.5rem .9rem;border:1px solid #ccc;border-radius:10px;text-decoration:none}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .card{border:1px solid #ddd;border-radius:12px;padding:1rem}
+    details{margin-top:1rem}
+  </style>
+</head>
+<body>
+  <a class="btn" href="index.html">← Volver</a>
+  <h1>Avance de Tesis</h1>
+
+  <div class="grid">
+    <article class="card">
+      <h3>Figura 2(a)</h3>
+      <p>Espacio latente (1280→3) con reconstrucciones ancestrales.</p>
+      <p><a class="btn" href="avance_v01/latent_umap_3d.html">Abrir</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Figura 2(b)</h3>
+      <p>Posición de nodos en árbol MCC de Tinamidae.</p>
+      <p><a class="btn" href="avance_v01/ID_NODOS.png">Abrir</a></p>
+    </article>
+  </div>
+
+  <details>
+    <summary>Descripción de los datos</summary>
+    <p>
+      2793 señales de 46 especies de Tinamidae, segmentos de 5 s sin ruido de
+      <a href="https://xeno-canto.org" target="_blank" rel="noopener">Xeno-Canto</a>. Círculos negros: ASR multivariado
+      (<code>mvMORPH::mvgls</code>, <code>model="OU"</code>, <code>penalty="RidgeArch"</code>, método H&L). Números: IDs de nodos MCC.
+    </p>
+  </details>
+</body>
+</html>
