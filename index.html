@@ -1,39 +1,29 @@
-<h2>Proyecto de Tesis - Gabriel Morales Tello</h2>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabriel Morales Tello — Tesis</title>
+  <style>
+    html,body{height:100%} body{margin:0;display:grid;place-items:center;font-family:system-ui,Segoe UI,Roboto,Arial}
+    .wrap{text-align:center;padding:2rem}
+    h1{margin:0 0 1rem 0}
+    .actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:.9rem 1.2rem;border-radius:12px;border:1px solid #ccc;text-decoration:none}
+    .btn:hover{background:#f6f6f6}
+    footer{position:fixed;bottom:.75rem;left:0;right:0;text-align:center;font-size:.85rem;color:#666}
+  </style>
 </head>
 <body>
-    <h1></h1>
-    <button onclick="location.href='proyecto_V21/STFT_embedding_3d.html'">Figura 1(a)</button>
-    <button onclick="location.href='proyecto_V21/BirdNet_embedding_3d.html'">Figura 1(b)</button>
-    <div class="description">
-        <p>(a)	UMAP 3D a partir de características directas de un espectrograma en escala Mel-log.</p>
-        <p>(b)	UMAP 3D a partir de características complejas extraídas de la penúltima capa de BirdNet.</p>
-        <p>Los datos corresponden a 3110 señales acústicas de 15 especies de la familia Strigidae (Buhos): 5 del género Bubo, 5 del género Glaucidium y 5 del género Otus. Se colorean los datos según género para observar agrupamiento en este nivel. Cada dato (es decir, cada punto en el espacio) es un segmento de 3 segundos extraído de un audio descargado de Xeno-Canto (https://xeno-canto.org). Cada segmento contiene la señal de una única especie en primer plano con una alta variabilidad de relación señal-ruido. Todos los segmentos fueron re-muestreados a una tasa de 48 Khz y 16 bits de cuantización en PCM-WAV. </p>
+  <main class="wrap">
+    <h1>Tesis — Gabriel Morales Tello</h1>
+    <p>Elige una sección:</p>
+    <div class="actions">
+      <a class="btn" href="proyecto.html">Proyecto de Tesis</a>
+      <a class="btn" href="avance.html">Avance de Tesis</a>
     </div>
-</body>
-</html>
-
-<h2>Avance de Tesis - Gabriel Morales Tello</h2>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
-    <h1></h1>
-    <button onclick="location.href='avance_v01/latent_umap_3d.html'">Figura 2(a)</button>
-    <button onclick="location.href='avance_v01/ID_NODOS.png'">Figura 2(b)</button>
-    <div class="description">
-        <p>(a) Espacio Latente de caracteres de 1280 dimensiones (reducidas a 3 para visualización)</p>
-        <p>Los datos corresponden a 2793 señales acústicas de 46 especies de la familia Tinamidae. Cada círculo de color en el espacio representa un segmento de 5 segundos extraído sin ruido de fondo de un audio descargado de Xeno-Canto (https://xeno-canto.org). Los círculos negros son reconstrucciones de estados ancestrales multivariados (mvMORPH::mvgls, model="OU", penalty="RidgeArch", método H&L). Los números indican la posición del nodo en un árbol de consenso bayesiano (MCC) </p>
-        <p>(b) Posición de nodos en un árbol de consenso bayesiano (MCC) de la familia Tinamidae</p>
-    </div>
+  </main>
+  <footer>© <span id="y"></span> GMT</footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
